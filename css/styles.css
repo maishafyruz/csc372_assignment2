@@ -58,6 +58,12 @@ header nav a {
   text-decoration: none;
   font-weight: bold;
 }
+
+header nav a:hover,
+header nav a:focus {
+  text-decoration: underline;
+}
+
 #hero {
   display: flex;
   align-items: center;
@@ -83,6 +89,12 @@ header nav a {
   padding: 10px 18px;
   border-radius: 6px;
 }
+
+.button-link:hover,
+.button-link:focus {
+  background-color: #1f3b30;
+}
+
 #upcoming-events {
   padding: 40px 0;
 }
@@ -108,13 +120,20 @@ header nav a {
   margin-bottom: 8px;
 }
 
+.event-card a:hover,
+.event-card a:focus {
+  text-decoration: underline;
+}
+
 .event-category {
   font-weight: bold;
   color: #5a6f64;
 }
+
 #event-grid .event-card:first-child {
   grid-column: span 2;
 }
+
 #about {
   background-color: white;
   border: 1px solid #cccccc;
@@ -134,6 +153,11 @@ footer a {
   color: white;
 }
 
+footer a:hover,
+footer a:focus {
+  text-decoration: underline;
+}
+
 footer ul {
   display: flex;
   gap: 20px;
@@ -145,6 +169,7 @@ footer ul {
 footer p {
   margin: 6px 0;
 }
+
 #event-intro {
   padding: 40px 0;
 }
@@ -163,7 +188,6 @@ footer p {
   padding: 24px;
   border-radius: 8px;
 }
-
 
 #related-events {
   padding: 40px 0;
@@ -185,35 +209,13 @@ footer p {
 .related-card img {
   width: 100%;
 }
-@media (max-width: 900px) {
-  #event-grid {
-    grid-template-columns: 1fr;
-  }
 
-  #event-grid .event-card:first-child {
-    grid-column: span 1;
-  }
-
-  #event-layout {
-    grid-template-columns: 1fr;
-  }
+.related-card a:hover,
+.related-card a:focus {
+  text-decoration: underline;
 }
 
-@media (max-width: 600px) {
-  #hero {
-    flex-direction: column;
-  }
-
-  header nav ul,
-  footer ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  main {
-    padding: 16px;
-  }
-}
+/* Saved events styles */
 
 .saved-event {
   border: 3px solid #234d3c;
@@ -226,9 +228,53 @@ footer p {
   border: none;
   padding: 10px 16px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .save-button:hover,
 .save-button:focus {
   background-color: #1f3b30;
+}
+
+#saved-events {
+  background-color: white;
+  border: 1px solid #cccccc;
+  padding: 24px;
+  margin: 40px 0;
+}
+
+#saved-events-list {
+  padding-left: 24px;
+}
+
+
+
+@media (max-width: 900px) {
+  #event-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #event-grid .event-card:first-child {
+    grid-column: span 1;
+  }
+
+  #event-layout {
+    grid-template-columns: 1fr;
+  }
+
+  #hero {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  header nav ul,
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    padding: 16px;
+  }
 }
