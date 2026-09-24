@@ -214,3 +214,21 @@ footer p {
     padding: 16px;
   }
 }
+
+.saved-event {
+  border: 3px solid #234d3c;
+  background-color: #eef5f1;
+}
+
+.save-button {
+  background-color: #234d3c;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  margin-top: 10px;
+}
+
+.save-button:hover,
+.save-button:focus {
+  background-color: #1f3b30;
+}
