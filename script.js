@@ -1,16 +1,15 @@
-/*
-  Name: Maisha Fyruz
-  Date: 09.24.2026
-  CSC 372-01
-  This file adds interactive Save Event behavior to the Campus Event Guide.
-*/
+/**
+ * Name: Maisha Fyruz
+ * Date: 09.24.2026
+ * CSC 372-01
+ * This file adds interactive Save Event behavior to the Campus Event Guide.
+ */
 
 window.addEventListener("load", setup);
 
 /**
  * Sets up the Save Event features when the page loads.
  */
-
 function setup() {
   let eventCards = document.querySelectorAll(".event-card");
 
@@ -24,12 +23,15 @@ function setup() {
     saveButton.addEventListener("click", toggleEvent);
 
     card.appendChild(saveButton);
-    }
+  }
 
-    createSavedEventsSummary();
+  createSavedEventsSummary();
 }
 
-
+/**
+ * Saves or removes an event when the Save Event button is clicked.
+ * @param {Event} event the click event
+ */
 function toggleEvent(event) {
   let button = event.currentTarget;
   let card = button.parentElement;
@@ -41,6 +43,7 @@ function toggleEvent(event) {
     card.classList.add("saved-event");
     button.textContent = "Remove Event";
   }
+
   updateSavedEvents();
 }
 
@@ -78,9 +81,7 @@ function updateSavedEvents() {
   let savedList = document.querySelector("#saved-events-list");
   let message = document.querySelector("#saved-message");
 
-  while (savedList.firstChild) {
-    savedList.removeChild(savedList.firstChild);
-  }
+  savedList.textContent = "";
 
   if (savedCards.length === 0) {
     message.textContent = "No events have been saved yet.";
