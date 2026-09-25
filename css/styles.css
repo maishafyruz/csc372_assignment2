@@ -59,11 +59,6 @@ header nav a {
   font-weight: bold;
 }
 
-header nav a:hover,
-header nav a:focus {
-  text-decoration: underline;
-}
-
 #hero {
   display: flex;
   align-items: center;
@@ -90,11 +85,6 @@ header nav a:focus {
   border-radius: 6px;
 }
 
-.button-link:hover,
-.button-link:focus {
-  background-color: #1f3b30;
-}
-
 #upcoming-events {
   padding: 40px 0;
 }
@@ -118,11 +108,6 @@ header nav a:focus {
 
 .event-card h3 {
   margin-bottom: 8px;
-}
-
-.event-card a:hover,
-.event-card a:focus {
-  text-decoration: underline;
 }
 
 .event-category {
@@ -151,11 +136,6 @@ footer {
 
 footer a {
   color: white;
-}
-
-footer a:hover,
-footer a:focus {
-  text-decoration: underline;
 }
 
 footer ul {
@@ -210,12 +190,37 @@ footer p {
   width: 100%;
 }
 
-.related-card a:hover,
-.related-card a:focus {
-  text-decoration: underline;
+@media (max-width: 900px) {
+  #event-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #event-grid .event-card:first-child {
+    grid-column: span 1;
+  }
+
+  #event-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* Saved events styles */
+@media (max-width: 600px) {
+  #hero {
+    flex-direction: column;
+  }
+
+  header nav ul,
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    padding: 16px;
+  }
+}
+
+/* Assignment 3 styles */
 
 .saved-event {
   border: 3px solid #234d3c;
@@ -241,40 +246,9 @@ footer p {
   border: 1px solid #cccccc;
   padding: 24px;
   margin: 40px 0;
+  border-radius: 8px;
 }
 
 #saved-events-list {
   padding-left: 24px;
-}
-
-
-
-@media (max-width: 900px) {
-  #event-grid {
-    grid-template-columns: 1fr;
-  }
-
-  #event-grid .event-card:first-child {
-    grid-column: span 1;
-  }
-
-  #event-layout {
-    grid-template-columns: 1fr;
-  }
-
-  #hero {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 600px) {
-  header nav ul,
-  footer ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  main {
-    padding: 16px;
-  }
 }
