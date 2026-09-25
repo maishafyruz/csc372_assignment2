@@ -1,8 +1,26 @@
 # PSU Campus Connect
 
+## Live Site
+
+[View the deployed website](https://maishafyruz.github.io/csc372_assignment2/)
+
 ## Project Description
 
 PSU Campus Connect is a responsive campus event guide created for students at the fictional Piedmont State University. The site helps students discover upcoming campus events and view detailed information about a featured event.
+
+## Assignment 3 - JavaScript Event Handling
+
+This version of PSU Campus Connect adds an interactive Save Event feature using JavaScript.
+
+Users can:
+
+- Save and remove campus events.
+- See saved events highlighted on the page.
+- See the button text change between "Save Event" and "Remove Event."
+- View a Saved Events list that updates automatically.
+- View each saved event's name, date and time, and location.
+
+The Save Event buttons and Saved Events section are created dynamically with JavaScript using DOM methods such as `createElement()`, `appendChild()`, `classList`, and event listeners.
 
 ## Layout Decisions
 
